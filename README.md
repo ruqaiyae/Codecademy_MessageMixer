@@ -41,9 +41,11 @@ Before you begin, try running the commands listed above in the terminal. Then, f
 ### Tasks
 #### Extract the encryption functions.
 1. The three encryption functions that Message Mixer Inc. wants to share are defined in message-mixer.js. They are:
+   
     * caesarCipher()
     * symbolCipher()
     * reverseCipher()
+      
 First, copy all three of these function definitions into encryptors.js. Then, save encryptors.js.
 
 2. Now, to turn encryptors.js into a module, its functions must be exported.
@@ -57,15 +59,19 @@ As a result, you should only have the user input and output logic remaining. Add
 4. You can now replace those deleted functions by importing them from the encryptors.js module.
 There are multiple ways of doing this, however, the suggested approach will avoid needing to make modifications to the input / output logic.
 At the top of message-mixer.js:
+
     * Declare a new variable called encryptors.
     * Then, import the module.exports object from encryptors.js and assign the imported object to encryptors.
 
-5. The module.exports object from encryptors.js is now stored in the variable encryptors.
+6. The module.exports object from encryptors.js is now stored in the variable encryptors.
 Extract the three encryption methods from encryptors and store them in three variables: caesarCipher, symbolCipher, and reverseCipher.
 
-6. Well done! If you’ve completed the steps correctly you should now be able to run the program again. For example, try running this command in the terminal:
+7. Well done! If you’ve completed the steps correctly you should now be able to run the program again. For example, try running this command in the terminal:
+   
       node message-mixer.js caesar 4
+   
 And then, when prompted, type the following message:
+
       > cnawp fkx!
 
 By moving the encryption functions into a separate module and exporting them, you’ve separated the concerns of the program, making it more organized and easier to navigate. Furthermore, you can now use these encryption methods to build another program!
