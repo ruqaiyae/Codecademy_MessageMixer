@@ -13,6 +13,7 @@ To use this service, run the command below:
 node message-mixer.js ['caesar'|'symbol'|'reverse'] [amount]
 
 Here are some examples of running this program:
+
       $ node message-mixer.js caesar 4
       Enter the message you would like to encrypt...
       > hello world
@@ -28,6 +29,7 @@ Here are some examples of running this program:
       > olleh dlrow
 
 At present, Message Mixer Inc. sells their encryption service as a program in a single file called message-mixer.js. This single file includes:
+
     * The functions that perform the encryptions listed above.
     * The code for retrieving the user input.
     * The code for displaying the output back to the user.
