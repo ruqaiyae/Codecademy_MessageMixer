@@ -65,6 +65,7 @@ Extract the three encryption methods from encryptors and store them in three var
       node message-mixer.js caesar 4
 And then, when prompted, type the following message:
       > cnawp fkx!
+
 By moving the encryption functions into a separate module and exporting them, you’ve separated the concerns of the program, making it more organized and easier to navigate. Furthermore, you can now use these encryption methods to build another program!
 
 #### Create a new program using the module.
