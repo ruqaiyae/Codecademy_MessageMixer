@@ -10,6 +10,7 @@ There are three encryption methods provided by this service:
     * A “Reverse Cipher” in which each word of the input message is reversed in place.
     
 To use this service, run the command below:
+
 node message-mixer.js ['caesar'|'symbol'|'reverse'] [amount]
 
 Here are some examples of running this program:
@@ -81,26 +82,34 @@ By moving the encryption functions into a separate module and exporting them, yo
 #### Create a new program using the module.
 7. The developers over at Super Encoder LLC heard about the encryptors.js module that you just released and want to use your encryption functions to create a new program.
 The Super Encoder developers want the user to be able to use their program to encode messages and decode them using the commands below:
+
       node super-encoder.js encode
+   
 and
+
       node super-encoder.js decode
+      
 Try running each of these commands. They currently print undefined.
 
-8. Open up super-encoder.js where you will see the input / output logic already defined.
+9. Open up super-encoder.js where you will see the input / output logic already defined.
 At the top of the file, you should see the functions encodeMessage() and decodeMessage() are incomplete. It will be your job to use the encryption functions to complete these two functions.
 First, at the top of super-encoder.js, import the encryption functions caesarCipher(), symbolCipher(), and reverseCipher() from the encryptors.js file.
 
-9. Use the three encryption methods to complete the encodeMessage() function by passing the input str parameter into one encryption function and then passing the returned value to the next encryption function. encodeMessage() should return the final encoded message.
+10. Use the three encryption methods to complete the encodeMessage() function by passing the input str parameter into one encryption function and then passing the returned value to the next encryption function. encodeMessage() should return the final encoded message.
 Some guidelines:
+
     * You must use each encryption function at least once.
     * It is your choice what order you use to call the encryption functions.
     * You may also re-use encryption functions to encode the message.
     * caesarCipher() requires an amount argument. Choose some number between 0 and 26 to use for this argument and remember your choice for decodeMessage().
+      
 When you are finished, try running the program like so:
+
     $ node super-encoder.js encode
 
-10. Decoding is the process of taking an encoded message and determining the original message by reversing the encoding process.
+12. Decoding is the process of taking an encoded message and determining the original message by reversing the encoding process.
 For example, using message-mixer.js, we can encode the message 'hello world' using a Caesar cipher with an amount of 4 like so:
+
     $ node message-mixer.js caesar 4
     Enter the message you would like to encrypt...
     > hello world
@@ -109,6 +118,7 @@ For example, using message-mixer.js, we can encode the message 'hello world' usi
     > lipps asvph
 
 To decode the message 'lipps asvph', we can run the program in reverse, like so:
+
     $ node message-mixer.js caesar -4
     Enter the message you would like to encrypt...
     > lipps asvph
